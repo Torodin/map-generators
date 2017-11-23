@@ -132,6 +132,7 @@ class Noise2D {
 		
 	public static BufferedImage perlinImage(int width, int height,int octave)
 	{
+		System.out.println("Generating noise map...");
 		BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
 		Graphics2D graphics = image.createGraphics();
 		float[][] perlin = GeneratePerlinNoise(GenerateWhiteNoise(width,height,(int) System.currentTimeMillis()),octave);
@@ -153,12 +154,14 @@ class Noise2D {
 		File file = new File("noise.png");
 		try {
 			ImageIO.write(image, "png", file);
+			System.out.println("Saved image");
 		} catch (IOException e) {
 			System.out.println("Error de escritura");
 		}
 		
 		int material1 = 127;
 		
+		System.out.println("Generating colored map...");
 		BufferedImage image2 = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
 		Graphics2D graphics2 = image2.createGraphics();
 		for(int x=0;x<width;x++){
@@ -174,7 +177,7 @@ class Noise2D {
 				}else{
 					colors = 200;
 				}
-				System.out.println("Colors ("+x+","+y+"):"+colors);
+				//System.out.println("Colors ("+x+","+y+"):"+colors);
 				graphics2.setColor(new Color(colors,colors,colors));
 				graphics2.drawRect(x, y, 1, 1);
 			}
@@ -183,6 +186,7 @@ class Noise2D {
 		File file2 = new File("noiseColors.png");
 		try {
 			ImageIO.write(image2, "png", file2);
+			System.out.println("Saved image");
 		} catch (IOException e) {
 			System.out.println("Error de escritura");
 		}
