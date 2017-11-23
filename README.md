@@ -8,4 +8,4 @@ Cave generator
 - image dimensions --> width and height
 - dimensions of the cave --> octave
 - persistence --> smoothness of limits
-- dimensions of the material --> lmtMaterial1/2
+- dimensions of the material --> lmtMaterial1
