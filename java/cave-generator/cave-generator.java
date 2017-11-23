@@ -116,8 +116,6 @@ class Noise2D {
 	        	int y = height+j;
 	        	random.setSeed(random.nextLong() ^ x);
 	        	random.setSeed(random.nextLong() ^ y);
-	        	//System.out.println("X:"+x+" Y:"+y+" Res:"+seedWithOffset);
-	        	//random.setSeed(seedWithOffset);
 	            noise[i][j] = (float)random.nextDouble() % 1;
 	        }
 	    }
