@@ -1,7 +1,7 @@
 # map-generators
 Compilatión of mi maps generators
 
-[Cave generator](cave-generator)
+[Cave generator](java/cave-generator)
 --------------
 
 - If you want change appearance of the cave, you need change: 
