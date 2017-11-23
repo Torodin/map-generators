@@ -1,6 +1,8 @@
 # map-generators
 Compilatión of mi maps generators
 
+[ES](README_ES.md)
+
 [Cave generator](java/cave-generator)
 --------------
 
